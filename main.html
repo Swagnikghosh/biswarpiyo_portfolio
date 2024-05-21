@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biswapriya Das || Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- boxicon css link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <style>
+    :root{
+        --bg-color:#e3edf7;
+        --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
+        --gradient-color-bg:linear-gradient(180deg,rgba(247,1,120,1)0%,
+                                                    rgba(160,8,156,1)51%,
+                                                    rgba(99,13,178,1)100%);
+        --main-color:#e6006d;
+        --font-color:#90979f;
+        --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
+                           rgba(0,0,0,0.23)0px 6px 6px;     
+        --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%);                                                          
+    }
+    
+    .services h1{
+        margin-bottom: 5rem;
+       display: flex;
+       justify-content: center;
+    }
+    
+    .service-container{
+        display: flex;
+        /* justify-content: center; */
+        /* align-items: center; */
+        flex-wrap: wrap;
+        gap: 1rem;
+       
+    }
+    .service-container .services-box{
+        flex: 1 1 20rem;
+        background: var(--gradient-white-bg2);
+        padding: 3rem 2rem 4rem;
+        box-shadow: var(--hover-box-shadow);
+        border-radius: 2rem;
+        text-align: center;
+        border: .2rem solid var(--bg-color);
+        transition: 0.5s ease;
+    }
+    .service-container .services-box ul li{
+        text-align: center;
+        font-size: 15px;
+        list-style: none;
+        
+    }
+    .service-container .services-box:hover{
+       border: 5px solid #e6006d;
+       transform: scale(1.03);
+       
+    }
+    .services-box i{
+        font-size: 4rem;
+        color: rgb(98, 0, 255);
+    }
+    .services-box h3{
+        font-size: 1.7rem;
+    }
+    .services-box p{
+        font-size: 1rem;
+        margin: 1rem;
+    }
+    .item{
+        color:var(--main-color);
+    }
+    .service-content {
+        max-height: 100px; /* Adjust the height based on your preference */
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+    }
+    
+    .service-content.expanded {
+        max-height: none;
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header>
+        <a href="#" class="logo"><span>B</span>ISWAPRIYA</a>
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="calculator/calculator.html">Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="right-header">
+           
+            <div class="menu-icon">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="home" id="home">
+        <div class="hero-info">
+            <h3>Welcome To my World</h3>
+            <h1>Hi I'm BISWAPRIYA DAS</h1>
+
+            <div class="text-animate">
+                <h2>Financial Market Researcher</h2>
+            </div>
+
+            <p>We have gained much wisdom from our ancestors, and future generations will also learn from us. As we continuously innovate in various fields, it is crucial that we also embrace new investment strategies. Failing to do so may leave us lagging behind. Through my consultation services, I offer clients the best advice to build substantial wealth and ensure proper protection.</p>
+
+            <div class="btn-box">
+                <a href="#about" class="btn">About! <i class='bx bx-right-arrow-alt' ></i></a>
+                <a href="#about" class="btn">Recognisation <i class='bx bx-right-arrow-alt' ></i></a>
+               
+            </div>
+
+            <div class="social-media">
+                <div class="bg-icon">
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <span></span>
+                </div>
+
+                <div class="bg-icon">
+                    <a href="#"><i class='bx bxl-github'></i></a>
+                    <span></span>
+                </div>
+
+                <div class="bg-icon">
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <span></span>
+                </div>
+
+                <div class="bg-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="img-hero">
+            <!-- <img src="img/hero3.png" alt=""> -->
+            
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="img/hero1.png" alt="" class="aboutHero">
+            <div class="showcase-ring">
+                <!-- <img src="shapes/ring.png" class="ring">
+                <img src="shapes/circle.png" class="circle"> -->
+            </div>
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About Me</h2>
+            <h3>15 Years of Experience in Financial Goal Planning</h3>
+            <p>My name is <span class="name">BISWAPRIYA DAS</span>, and I am a Financial Architect, an AMFI Registered Mutual Fund Distributor, and a NSE Academy Certified Financial Goal Planner at the Advanced Level. I specialize in financial needs assessment, solution-oriented planning, and goal-based investment strategies. With over a decade of experience in the financial sector, I hold a Bachelor's degree in Economics and Philosophy. Currently, I am associated with <a href="https://finomatic.in/"> <span class="name">FINOMATIC FINTECH SERVICE PVT LTD</span></a> as a Senior Business Development Partner and Mentor. My commitment as a financial advisor is to provide clients with the best possible advice, empowering them to make informed financial decisions and achieve their financial objectives.</p>
+        </div>
+        
+        
+        
+        
+        
+        
+    </section>
+
+    <section class="services" id="services">
+        <h1 class="heading service">
+            Our <span>Services</span>
+        </h1>
+        <div class="service-container">
+            <div class="services-box">
+               
+                <button href="#" class="btn">MUTUAL FUND</i></button>
+                
+                <ul>
+                    <br>
+                    <li>portfolio design</li>
+                    <li>portfolio health checkup</li>
+                    <li>Unclaimed investment solution</li>
+                    <li>New KYC & hold KYC solution</li>
+                    <li>All types of non financial transactions </li>
+
+                    <li>Retirement planning</li>
+                    <li>Solution oriented investment planning</li>
+                    <li>Provide mobile application & web login</li>
+                    <li>Investment through NSE NFM |I</li>
+                    <li>All services provide online & ofline</li>
+                    <li>Empanelled with finomatic fintech service pvt
+                        Itd</li>
+                    <li>Transmission</li>
+                    <li>Goal setting</li>
+                    <br>
+                </ul>
+                <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+
+            <div class="services-box">
+              
+                <button href="#" class="btn">INSURENCE</i></button>
+                <ul>
+                    <br>
+                    <li>Accidental insurance policy</li>
+                    <li> Endowment insurance</li>
+                    <li> Money back insurance</li>
+                    <li> ULIP policy</li>
+                    <li> Pension policy </li>
+                    <li>Individual health insurance</li>
+                    <li> Group health insurance</li>
+                    <li>Individual mediclaim</li>
+                    <li>Family mediclaim</li>
+                    <li> Group mediclaim</li>
+                    <li>Corporate mediclaim</li>
+                    <li>Term insurance</li>
+                    <li>Critical illness policy</li>
+                    <li>Senior citizen policy</li>
+                    <br>
+                </ul>
+
+            </div>
+            <div class="services-box">
+                
+                <button href="#" class="btn">GENERAL INSURENCE</i></button>
+                <ul>
+                    <br>
+                   <li>Two Wheeler Insurance</li> 
+                   <li>Four Wheeler Insurance</li>
+                   <li>Commercial vehicle Insurance</li>
+                   <li>Fire & Burglary Insurance</li> 
+                   <li> Shopkeeper Insurance</li>
+                   <li>Merine Insurance</li> 
+                   <li>Cyber security Insurance</li>
+                   <li>Consumer Durable Insurance</li>
+                   <li>Agriculture Insurance</li>
+                   <li>Income Protection Insurance</li>
+                </ul>
+                <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+            <div class="services-box">
+                
+                <button href="#" class="btn">OTHER INVESTMENTS</i></button>
+                <ul>
+                    <br>
+                    <li>Demat account opening</li>
+                    <li>Online share trading</li>
+                    <li>Provide mobile application & web login</li> 
+                    <li>Tax saving investment investment for capital gain</li>
+                    <li>Corporate fixed deposit</li>
+                    <li>National pension scheme</li>
+                    <li>Bond market investment</li>
+                    <li>ETF investment</li>
+                </ul>
+                <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+            <div class="services-box">
+              
+                <button href="#" class="btn">LOANS</i></button>
+                <ul>
+                    <br>
+                    <li>House Building Loan</li>
+                    <li>Personal Loan</li>
+                    <li>Car Loan</li>
+                    <li>Two Wheeler Loan</li> 
+                    <li>Education Loan</li>
+                    <li>Business Loan</li>
+                    <li>Loan Against security</li>
+                    <li>Mortgage Loan</li>
+                </ul>
+                <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+            
+            <div class="services-box">
+              
+                <button href="#" class="btn">OTHERS</i></button>
+                <ul>
+                    <br>
+                    <li>Website Building & Maintenance</li>
+                    <li>Digital Marketing</li>
+                    <li>Tax consultancy</li>
+                    <li>Online Application Support</li>
+                    <li>Customer Awareness Program</li>
+                </ul>
+                <!-- <a href="#" class="btn">Read more</a> -->
+            </div>
+
+        </div>
+    </section>
+       
+    </section>
+
+    <section class="portfolio" id="portfolio">
+        
+    </section>
+
+   
+    <section class="down-box" id="contact">
+        <div class="contactSkills">
+            <div class="contact-info">
+                <div class="main-text">
+                    <h2 class="heading">Contact Me</h2>
+                    <span>get in touch with me</span>
+                </div>
+                <form action="mailto:biswapriyadas73@gmail.com" method="post" enctype="text/plain">
+                    <div class="input-box">
+                        <input type="text" placeholder="First Name" name="firstname">
+                        <input type="text" placeholder="Last Name" name="lastname">
+                    </div>
+                    <input type="email" placeholder="Email" name="email">
+                    <input type="text" placeholder="Subject" name="subject">
+                    <textarea name="message" cols="30" rows="10" placeholder="Your message"></textarea>
+                    <div class="formBtn">
+                        <button type="submit" class="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>Copyright © 2024 by <span>Swagnik</span> || All Right Reservd.</p>
+    </footer>
+
+    <div id="progress">
+        <span id="progress-value">
+            <i class='bx bxs-chevrons-up' ></i>
+        </span>
+    </div>
+
+    <!-- scroll reveal  -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- mixitup cdn js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

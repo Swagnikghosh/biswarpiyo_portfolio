@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function calculateCostOfDelay() {
+            var monthlyInvestment = parseFloat(document.getElementById('monthlyInvestment').value);
+            var investmentPeriod = parseInt(document.getElementById('investmentPeriod').value);
+            var expectedReturn = parseFloat(document.getElementById('expectedReturn').value);
+            var delay = parseInt(document.getElementById('delay').value);
+
+            if (isNaN(monthlyInvestment) || isNaN(investmentPeriod) || isNaN(expectedReturn) || isNaN(delay)) {
+                alert('Please enter valid numbers');
+                return;
+            }
+
+            var totalInvestment = monthlyInvestment * investmentPeriod;
+            var futureValue = totalInvestment * Math.pow(1 + expectedReturn / 100, investmentPeriod);
+            var delayedFutureValue = monthlyInvestment * Math.pow(1 + expectedReturn / 100, investmentPeriod + delay);
+            var costOfDelay = delayedFutureValue - futureValue;
+
+            alert('Cost of Delay: ' + costOfDelay.toFixed(2));
+        }
+    </script>
+</head>
+<body>
+    <div id="calculator">
+        <h2>Cost of delay SIP</h2>
+        <label for="monthlyInvestment">Monthly Investment:</label>
+        <input type="number" id="monthlyInvestment" placeholder="Enter monthly investment" required>
+
+        <label for="investmentPeriod">Investment Period (in years):</label>
+        <input type="number" id="investmentPeriod" placeholder="Enter investment period" required>
+
+        <label for="expectedReturn">Expected Return (%):</label>
+        <input type="number" id="expectedReturn" placeholder="Enter expected return" required>
+
+        <label for="delay">Delay (in years):</label>
+        <input type="number" id="delay" placeholder="Enter delay" required>
+
+        <button onclick="calculateCostOfDelay()" class="btn">Calculate Cost of Delay</button>
+    </div>
+</body>
+</html>

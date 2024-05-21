@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        function calculateMarriageSavings() {
+            var childAge = parseFloat(document.getElementById('childAge').value);
+            var marriageAfter = parseFloat(document.getElementById('marriageAfter').value);
+            var requiredAmount = parseFloat(document.getElementById('requiredAmount').value);
+            var annualSavings = parseFloat(document.getElementById('annualSavings').value);
+            var existingCorpus = parseFloat(document.getElementById('existingCorpus').value);
+            var expectedReturn = parseFloat(document.getElementById('expectedReturn').value) / 100;
+            var inflationRate = parseFloat(document.getElementById('inflationRate').value) / 100;
+
+            // Calculate future value of existing corpus
+            var futureValueExistingCorpus = existingCorpus * Math.pow((1 + expectedReturn), marriageAfter);
+
+            // Calculate future savings needed
+            var futureSavingsNeeded = (requiredAmount - futureValueExistingCorpus) / Math.pow((1 + inflationRate), marriageAfter);
+
+            // Calculate annual savings required
+            var annualSavingsRequired = futureSavingsNeeded / ((Math.pow((1 + inflationRate), marriageAfter) - 1) / inflationRate);
+
+            // Display the result
+            document.getElementById('result').innerHTML = "Annual Savings Required: $" + annualSavingsRequired.toFixed(2);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="calculator">
+        <h2>Marrige calculator</h2>
+        <label for="childAge">Child's Age:</label>
+        <input type="number" id="childAge" required>
+
+        <label for="marriageAfter">Child will get married after (years):</label>
+        <input type="number" id="marriageAfter" required>
+
+        <label for="requiredAmount">Amount required for marriage:</label>
+        <input type="number" id="requiredAmount" required>
+
+        <label for="annualSavings">Annual Savings:</label>
+        <input type="number" id="annualSavings" required>
+
+        <label for="existingCorpus">Existing Corpus:</label>
+        <input type="number" id="existingCorpus" required>
+
+        <label for="expectedReturn">Expected Rate of Return (%):</label>
+        <input type="number" id="expectedReturn" required>
+
+        <label for="inflationRate">Expected Inflation Rate (%):</label>
+        <input type="number" id="inflationRate" required>
+
+        <button onclick="calculateMarriageSavings()" class="btn">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+</body>
+
+</html>

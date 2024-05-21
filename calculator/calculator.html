@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+        rel='stylesheet'>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <title>PDF Download Page</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+        /* Your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        :root{
+            --bg-color:#e3edf7;
+            --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
+            --gradient-color-bg:linear-gradient(180deg,rgba(247,1,120,1)0%,
+                                                        rgba(160,8,156,1)51%,
+                                                        rgba(99,13,178,1)100%);
+            --main-color:#e6006d;
+            --font-color:#90979f;
+            --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
+                               rgba(0,0,0,0.23)0px 6px 6px;     
+            --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%);                                                          
+        }
+        .container {
+            
+            max-width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .pdf-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px;
+        }
+        
+        .pdf-card {
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            height: 133px;
+            width: 238px;
+        }
+
+        .pdf-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .pdf-description {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .download-button {
+            
+            display: flex;
+            height: 31px;
+            width: 87px;
+            color: white;
+            background: var(--gradient-color-bg);
+            border-radius: 35px;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .download-button:hover {
+            box-shadow: var(--hover-box-shadow);
+        }
+
+        #search {
+            display:inline block;
+            width: 85%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #search-button {
+            display: inline block;
+            width:100px;
+            padding: 10px;
+            background: var(--gradient-color-bg);
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #search-button:hover {
+            box-shadow: var(--hover-box-shadow);
+        }
+        i{
+            width: 42px;
+            height: 42px;
+            font-size: 1.5rem;
+            color: var(--main-color);
+           
+            background: #fff;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: .4s;
+           border-radius: 50%;
+            z-index: 1;
+        }
+       
+    </style>
+    </head>
+    <body>
+
+        <section class="services" id="services">
+            <div class="main-text">
+                <h2 class="heading">CALCULATOR</h2>
+                <span>what i will do for you</span>
+            </div>
+
+           
+            <br><br>
+            <div class="allServices">
+                <a href="sip.html">
+                  <div class="servicesItem">
+                    
+                    <h3 class="pdf-title">SIP CALCULATOR</h3>
+                    
+                    <br>
+                    
+                </div>
+                </a>
+                
+                <a href="lumpsum.html">
+                  <div class="servicesItem">
+
+                    <h3 class="pdf-title">LUMSUM CALCULATOR</h3>
+                    <br>
+                    
+                </div>
+                </a>
+               
+                <a href="sipdelay.html">
+                  <div class="servicesItem">
+
+                    <h3 class="pdf-title">COST OF DELAY SIP</h3>
+                    <br>
+                    
+                </div>
+                </a>
+
+                
+                <a href="marriage.html">
+                  <div class="servicesItem">
+
+                    <h3 class="pdf-title">MARRAIGE CALCULATOR</h3>
+                    <br>
+                    
+                </div>
+                </a>
+               <a href="sipstepup.html">
+                <div class="servicesItem">
+
+                  <h3 class="pdf-title">SIP STEP UP CALCULATOR</h3>
+                  <br>
+                  
+              </div>
+               </a>
+                
+                <a href="retirement.html">
+                  <div class="servicesItem">
+
+                    <h3 class="pdf-title">RETIREMENT CALCULATOR</h3>
+                    <br>
+                    
+                </div>
+                </a>
+               <a href="siptenure.html">
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">SIP TENURE CALCULATOR</h3>
+                    <br>
+                    
+                </div>
+               </a>
+                <a href="emi.html">
+                    <div class="servicesItem">
+
+                        <h3 class="pdf-title">EMI CALCULATOR</h3>
+                        <br>
+                       
+                    </div>
+                </a>
+               
+               
+            </div>
+
+        </section>
+        <script>
+        const searchInput = document.getElementById("search");
+        const pdfCards = document.querySelectorAll(".servicesItem");
+
+        document.getElementById("search-button").addEventListener("click", () => {
+            const searchText = searchInput.value.toLowerCase();
+            pdfCards.forEach((card) => {
+                const title = card.querySelector(".pdf-title").textContent.toLowerCase();
+                if (title.includes(searchText)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    </script>
+    </body>
+</html>

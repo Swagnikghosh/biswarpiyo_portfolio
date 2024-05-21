@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Retirement Calculator</title>
+</head>
+<body>
+
+<div id="calculator">
+    <h2>Retirement Calculator</h2>
+    <form id="retirementForm">
+        <label for="currentAge">Current Age:</label>
+        <input type="number" id="currentAge" required>
+
+        <label for="retirementAge">Retirement Age:</label>
+        <input type="number" id="retirementAge" required>
+
+        <label for="currentExpenses">Current Monthly Expenses:</label>
+        <input type="number" id="currentExpenses" required>
+
+        <label for="inflation">Expected Inflation:</label>
+        <input type="number" id="inflation" required>
+
+        <label for="savingsPerMonth">Current Savings Per Month:</label>
+        <input type="number" id="savingsPerMonth" required>
+
+        <label for="existingCorpus">Existing Corpus:</label>
+        <input type="number" id="existingCorpus" required>
+
+        <label for="preRetirementReturns">Expected Pre-Retirement Returns:</label>
+        <input type="number" id="preRetirementReturns" required>
+
+        <label for="postRetirementReturns">Expected Post-Retirement Returns:</label>
+        <input type="number" id="postRetirementReturns" required>
+
+        <label for="lifeExpectancy">Life Expectancy:</label>
+        <input type="number" id="lifeExpectancy" required>
+
+        <button type="button" onclick="calculateRetirement()" class="btn">Calculate</button>
+    </form>
+
+    <h3 id="result"></h3>
+</div>
+
+<script>
+    function calculateRetirement() {
+        // Fetch input values
+        const currentAge = document.getElementById('currentAge').valueAsNumber;
+        const retirementAge = document.getElementById('retirementAge').valueAsNumber;
+        const currentExpenses = document.getElementById('currentExpenses').valueAsNumber;
+        const inflation = document.getElementById('inflation').valueAsNumber;
+        const savingsPerMonth = document.getElementById('savingsPerMonth').valueAsNumber;
+        const existingCorpus = document.getElementById('existingCorpus').valueAsNumber;
+        const preRetirementReturns = document.getElementById('preRetirementReturns').valueAsNumber;
+        const postRetirementReturns = document.getElementById('postRetirementReturns').valueAsNumber;
+        const lifeExpectancy = document.getElementById('lifeExpectancy').valueAsNumber;
+
+        // Calculate retirement savings
+        const yearsToRetirement = retirementAge - currentAge;
+        const futureValue = existingCorpus * Math.pow((1 + preRetirementReturns / 100), yearsToRetirement);
+        const monthlyExpensesInFuture = currentExpenses * Math.pow((1 + inflation / 100), yearsToRetirement);
+        const monthlySavings = savingsPerMonth * 12 * ((Math.pow((1 + postRetirementReturns / 100), (lifeExpectancy - retirementAge)) - 1) / (postRetirementReturns / 100));
+
+        const retirementSavings = futureValue + monthlySavings;
+        
+        // Calculate expected monthly expenses at age 60
+        const futureMonthlyExpenses = monthlyExpensesInFuture * Math.pow((1 + inflation / 100), (60 - retirementAge));
+
+        // Calculate expected retirement amount required
+        const retirementAmountRequired = futureMonthlyExpenses * 12 * (lifeExpectancy - 60);
+
+        // Display result
+        document.getElementById('result').innerHTML = `
+            Estimated Retirement Savings: ₹${retirementSavings.toFixed(2)}<br>
+            Expected Monthly Expenses at Age 60: ₹${futureMonthlyExpenses.toFixed(2)}<br>
+            Expected Retirement Amount Required: ₹${retirementAmountRequired.toFixed(2)}
+        `;
+    }
+</script>
+
+</body>
+</html>

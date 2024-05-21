@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lump Sum Calculator</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div id="calculator">
+    <h2>Lump Sum Calculator</h2>
+    <label for="principal">Principal Amount:</label>
+    <input type="number" id="principal" placeholder="Enter the principal amount">
+
+    <label for="interest">Interest Rate (%):</label>
+    <input type="number" id="interest" placeholder="Enter the annual interest rate">
+
+    <label for="years">Number of Years:</label>
+    <input type="number" id="years" placeholder="Enter the number of years">
+
+    <button onclick="calculate()" class="btn">Calculate</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<script>
+    function calculate() {
+        var principal = parseFloat(document.getElementById('principal').value);
+        var interest = parseFloat(document.getElementById('interest').value);
+        var years = parseFloat(document.getElementById('years').value);
+
+        if (isNaN(principal) || isNaN(interest) || isNaN(years)) {
+            alert("Please enter valid numbers");
+            return;
+        }
+
+        var futureValue = principal * Math.pow(1 + (interest / 100), years);
+        var result = "Future value is Rs." + futureValue.toFixed(2);
+
+        document.getElementById('result').innerText = result;
+    }
+</script>
+
+</body>
+</html>

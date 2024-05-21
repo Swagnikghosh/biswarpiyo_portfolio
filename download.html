@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+        <title>PDF Download Page</title>
+        <link rel="stylesheet" href="style3.css">
+        
+    </head>
+    <body>
+
+        <section class="services" id="services">
+            <div class="main-text">
+                <h2 class="heading">PDF Download page</h2>
+                <span>what i will do for you</span>
+            </div>
+
+            <div class="container">
+
+                <div class="download">
+                    <input type="text" id="search"
+                        placeholder="Search by PDF Name">
+                    <button id="search-button">Search</button>
+                </div>
+
+            </div>
+            <br><br>
+            <div class="allService">
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">TATA MEDICLAIM CLAIM FORM</h3>
+                    <br>
+                    <a href="pdf\MEDICARE CLAIM FORM.pdf"
+                    class="btn" target="_blank">Download</a>
+                </div>
+
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title"> HDFC MEDICLAIM CLAIM FORM</h3>
+                    <br>
+                    <a href="pdf\Claim-form(HDFC).pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title"> PAN BASED MAIL MODILE FORM UPDATION
+                        (KFINTECH)</h3>
+                    <br>
+                    <a href="pdf\KFintech_PAN_base_request_form.pdf"
+                    class="btn" target="_blank">Download</a>
+                </div>
+
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">PAN BASED MAIL MODILE UPDATION FORM
+                        (CAMS)</h3>
+                    <br>
+                    <a href="pdf\Updation_of_Mobile_No n Email ID (1).pdf"
+                    class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">ANNEXURE 1A </h3>
+                    <br>
+                    <a href="pdf\Annexure-Ia_Bank Attestation of Signature & bank account details (5).pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">ARN TRANSFER FORM</h3>
+                    <br>
+                    <a href="pdf\ARN Transfer with Receiving.pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">REDEMPTION FORM </h3>
+                    <br>
+                    <a href="pdf\Redemption_Form Finomatic.pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">CAMSKRA KYC FORM</h3>
+                    <br>
+                    <a href="pdf\CAMSKRA_latest_Form-1-2.pdf"
+                    class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">IIN FORM</h3>
+                    <br>
+                    <a href="pdf\NEWVERSIONIIN.pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">SIP CANCELLATION FORM</h3>
+                    <br>
+                    <a href="pdf\SIP_Cancellation_Form finomatic.pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">SWITCH FORM</h3>
+                    <br>
+                    <a href="pdf\Switch form with Receiving.pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">IIN MAPPING FORM</h3>
+                    <br>
+                    <a href="pdf\IIN Mapping FORM.pdf"
+                        class="btn" target="_blank">Download</a>
+                </div>
+            </div>
+
+        </section>
+        <script>
+            const searchInput = document.getElementById("search");
+const pdfCards = document.querySelectorAll(".servicesItem");
+
+document.getElementById("search-button").addEventListener("click", () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    pdfCards.forEach((card) => {
+        const title = card.querySelector(".pdf-title").textContent.toLowerCase();
+        const button = card.querySelector(".btn");
+
+        if (title.includes(searchText)) {
+            card.style.display = "flex";
+            button.style.display = "flex"; // Show the button
+        } else {
+            card.style.display = "none";
+            button.style.display = "none"; // Hide the button
+        }
+    });
+});
+
+            
+    </script>
+    </body>
+</html>

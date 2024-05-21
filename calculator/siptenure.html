@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div id="calculator">
+    <h2>SIP Tenure Calculator</h2>
+    <label for="futureAmount">Future Amount Required:</label>
+    <input type="number" id="futureAmount" placeholder="Enter future amount" value="20000000">
+
+    <label for="monthlyInvestment">Monthly Investment:</label>
+    <input type="number" id="monthlyInvestment" placeholder="Enter monthly investment" value="20000">
+
+    <label for="annualReturn">Annual Return Expected (%):</label>
+    <input type="number" id="annualReturn" placeholder="Enter annual return" value="12">
+
+    <button onclick="calculateSIP()" class="btn">Calculate SIP Tenure</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<script>
+    function calculateSIP() {
+        var futureAmount = document.getElementById("futureAmount").value;
+        var monthlyInvestment = document.getElementById("monthlyInvestment").value;
+        var annualReturn = document.getElementById("annualReturn").value / 100; // convert percentage to decimal
+
+        var months = 0;
+        while (futureAmount > 0) {
+            futureAmount = futureAmount - (monthlyInvestment * ((1 + annualReturn / 12) ** months));
+            months++;
+        }
+
+        var numberOfYears = Math.floor(months / 12);
+        var remainingMonths = months % 12;
+
+        var result = numberOfYears > 0 ? numberOfYears + " years" : "";
+        result += remainingMonths > 0 ? (result ? " and " : "") + remainingMonths + " months" : "";
+
+        document.getElementById("result").textContent = "SIP Tenure: " + result;
+    }
+</script>
+
+</body>
+</html>

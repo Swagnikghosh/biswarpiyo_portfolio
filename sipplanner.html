@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIP Planner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    #sipForm {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div id="sipForm">
+  <h2>SIP Planner</h2>
+  <label for="investmentAmount">Investment Amount (INR): </label>
+  <input type="number" id="investmentAmount" required>
+
+  <label for="sipDuration">SIP Duration (years): </label>
+  <input type="number" id="sipDuration" required>
+
+  <label for="expectedReturns">Expected Annual Returns (%): </label>
+  <input type="number" id="expectedReturns" required>
+
+  <label for="amcSelect">Select AMC: </label>
+  <select id="amcSelect" required>
+    <option value="amc1">AMC 1</option>
+    <option value="amc2">AMC 2</option>
+    <!-- Add more options as needed -->
+  </select>
+
+  <button onclick="calculateSip()">Calculate SIP</button>
+
+  <h3>Results</h3>
+  <p id="result"></p>
+</div>
+
+<script>
+  function calculateSip() {
+    const investmentAmount = parseFloat(document.getElementById('investmentAmount').value);
+    const sipDuration = parseFloat(document.getElementById('sipDuration').value);
+    const expectedReturns = parseFloat(document.getElementById('expectedReturns').value);
+    const amcSelect = document.getElementById('amcSelect');
+    const selectedAMC = amcSelect.options[amcSelect.selectedIndex].text;
+
+    const monthlyReturns = expectedReturns / 12 / 100;
+    const totalMonths = sipDuration * 12;
+
+    const futureValue = investmentAmount * ((Math.pow(1 + monthlyReturns, totalMonths) - 1) / monthlyReturns) * (1 + monthlyReturns);
+
+    const resultElement = document.getElementById('result');
+    resultElement.innerHTML = `Your SIP investment with ${selectedAMC} is estimated to grow to <strong>${futureValue.toFixed(2)} INR</strong> after ${sipDuration} years.`;
+  }
+</script>
+
+</body>
+</html>
