@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 90%; /* Adjusted width for responsiveness */
+    max-width: 1200px; /* Added max-width for larger screens */
+    height: 100vh; /* Set height relative to viewport height */
+    margin: 50px auto; /* Center the slider */
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 1s;
+}
+
+.nav1 {
+    text-align: center;
+    
+}
+
+
+
+/* Media queries for various screen sizes */
+@media screen and (max-width: 768px) {
+    main {
+        width: 95%; /* Adjusted width for smaller screens */
+    }
+
+    
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        height: 40vh; /* Adjusted height for smaller screens */
+    }
+
+   
+}
