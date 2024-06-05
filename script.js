@@ -70,6 +70,8 @@ var swiper = new Swiper(".mySwiper", {
     }
   });
 
+//slide
+
 
 
 //   skill Progress bar 
