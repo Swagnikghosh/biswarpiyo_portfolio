@@ -13,8 +13,8 @@ main {
     overflow: hidden;
 }
 h1{
-    margin-top: -70px;
-    margin-bottom: -20px;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 .slide {
     width: 100%;
@@ -27,8 +27,12 @@ h1{
     text-align: center;
     
 }
-
-
+.cart1{
+    margin-top: -1000px;
+}
+#contact{
+    margin-top: -300px;
+}
 
 /* Media queries for various screen sizes */
 @media screen and (max-width: 768px) {

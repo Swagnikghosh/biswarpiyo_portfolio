@@ -4,60 +4,79 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'
+            rel='stylesheet'>
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="style.css">
+  
+    <link rel="stylesheet" href="style4.css">
     <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="cart.css">
    <!-- custom js file link  -->
    <script src="cart.js" defer></script>
 
 </head>
 <body>
-   
-<div class="container">
+   <div class="overlay"></div>
+   <header>
+       <a href="#" class="logo"><span>B</span>ISWAPRIYA</a>
+       <ul class="navlist">
+           <li><a href="#home" class="active">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="cart.html">Services</a></li>
+           <li><a href="download.html">Download</a></li>
+           <li><a href="calculator/calculator.html">Calculator</a></li>
+           <li><a href="#contact">Contact</a></li>
+       </ul>
+       <div class="right-header">
+          
+           <div class="menu-icon">
+               <div class="bar"></div>
+           </div>
+       </div>
+   </header>
+<div class="container1">
 
    <h3 class="title"> organic products </h3>
 
    <div class="products-container">
 
       <div class="product" data-name="p-1">
-         <img src="images/1.png" alt="">
-         <h3>strawberries</h3>
-         <div class="price">$2.00</div>
+         <i class='bx bxs-bank item'></i>
+         <h3>MUTUAL FUNDS</h3>
+         <!-- <div class="price">$2.00</div> -->
       </div>
 
       <div class="product" data-name="p-2">
-         <img src="images/2.png" alt="">
-         <h3>onions</h3>
-         <div class="price">$2.00</div>
+         <i class='bx bxs-shield-plus item'></i>
+         <h3>INSURENCE</h3>
+         <!-- <div class="price">$2.00</div> -->
       </div>
 
       <div class="product" data-name="p-3">
-         <img src="images/3.png" alt="">
-         <h3>tomatoes</h3>
-         <div class="price">$2.00</div>
+         <i class='bx bx-plus-medical item'></i>
+         <h3>GENERAL INSURENCE</h3>
+         <!-- <div class="price">$2.00</div> -->
       </div>
 
       <div class="product" data-name="p-4">
-         <img src="images/4.png" alt="">
-         <h3>brinjal</h3>
-         <div class="price">$2.00</div>
+         <i class='bx bx-money-withdraw item'></i>
+         <h3>OTHER INVESTMENTS</h3>
+         <!-- <div class="price">$2.00</div> -->
       </div>
 
       <div class="product" data-name="p-5">
-         <img src="images/5.png" alt="">
-         <h3>broccoli</h3>
-         <div class="price">$2.00</div>
+         <i class='bx bxs-wallet-alt item' ></i>
+         <h3>LOANS</h3>
+         <!-- <div class="price">$2.00</div> -->
       </div>
 
       <div class="product" data-name="p-6">
-         <img src="images/6.png" alt="">
-         <h3>potatoes</h3>
-         <div class="price">$2.00</div>
+         <i class='bx bx-expand-horizontal item'></i>
+         <h3>OTHERS</h3>
+         <!-- <div class="price">$2.00</div> -->
       </div>
 
    </div>
@@ -67,7 +86,7 @@
 <div class="products-preview">
 
    <div class="preview" data-target="p-1">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times item"></i>
       <!-- <img src="images/1.png" alt=""> -->
       <h3>MUTUAL FUNDS</h3>
       
@@ -81,7 +100,7 @@
 
    <div class="preview" data-target="p-2">
       <!-- <h3>INSURENCE</h3> -->
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times item"></i>
       <!-- <img src="images/2.png" alt=""> -->
       <h3>INSURENCE</h3>
       <div class="stars">
@@ -97,7 +116,7 @@
    </div>
 
    <div class="preview" data-target="p-3">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times item"></i>
       
       <h3>GENERAL INSURENCE</h3>
       
@@ -107,7 +126,7 @@
    </div>
 
    <div class="preview" data-target="p-4">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times item"></i>
       
       <h3>OTHER INVESTMENTS</h3>
       
@@ -117,7 +136,7 @@
    </div>
 
    <div class="preview" data-target="p-5">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times item"></i>
       
       <h3>LOANS</h3>
       
@@ -127,7 +146,7 @@
    </div>
 
    <div class="preview" data-target="p-6">
-      <i class="fas fa-times"></i>
+      <i class="fas fa-times item"></i>
       
       <h3>OTHERS</h3>
       
@@ -136,127 +155,7 @@
       
    </div>
 
-</div>
-<section class="services" id="services">
-    <h1 class="heading service">
-        Our <span>Services</span>
-    </h1>
-    <div class="service-container">
-        <div class="services-box">
-           
-            <button href="#" class="btn">MUTUAL FUND</i></button>
-            
-            <ul>
-                <br>
-                <li>portfolio design</li>
-                <li>portfolio health checkup</li>
-                <li>Unclaimed investment solution</li>
-                <li>New KYC & hold KYC solution</li>
-                <li>Retirement planning</li>
-                <li>Solution oriented investment planning</li>
-                <li>Provide mobile application & web login</li>
-                <li>Investment through NSE NFM |I</li>
-                <li>All services provide online & ofline</li>
-                <li>Empanelled with finomatic fintech service pvt
-                    Itd</li>
-                <li>Transmission</li>
-                <li>Goal setting</li>
-                <br>
-            </ul>
-            <!-- <a href="#" class="btn">Read more</a> -->
-        </div>
 
-        <div class="services-box">
-          
-            <button href="#" class="btn">INSURENCE</i></button>
-            <ul>
-                <br>
-                <li>Accidental insurance policy</li>
-                <li> Endowment insurance</li>
-                <li> Money back insurance</li>
-                <li> ULIP policy</li>
-                <li> Pension policy </li>
-                <li>Individual health insurance</li>
-                <li> Group health insurance</li>
-                <li>Individual mediclaim</li>
-                <li>Family mediclaim</li>
-                <li> Group mediclaim</li>
-                <li>Corporate mediclaim</li>
-                <li>Term insurance</li>
-                <li>Critical illness policy</li>
-                <li>Senior citizen policy</li>
-                <br>
-            </ul>
-
-        </div>
-        <div class="services-box">
-            
-            <button href="#" class="btn">GENERAL INSURENCE</i></button>
-            <ul>
-                <br>
-               <li>Two Wheeler Insurance</li> 
-               <li>Four Wheeler Insurance</li>
-               <li>Commercial vehicle Insurance</li>
-               <li>Fire & Burglary Insurance</li> 
-               <li> Shopkeeper Insurance</li>
-               <li>Merine Insurance</li> 
-               <li>Cyber security Insurance</li>
-               <li>Consumer Durable Insurance</li>
-               <li>Agriculture Insurance</li>
-               <li>Income Protection Insurance</li>
-            </ul>
-            <!-- <a href="#" class="btn">Read more</a> -->
-        </div>
-        <div class="services-box">
-            
-            <button href="#" class="btn">OTHER INVESTMENTS</i></button>
-            <ul>
-                <br>
-                <li>Demat account opening</li>
-                <li>Online share trading</li>
-                <li>Provide mobile application & web login</li> 
-                <li>Tax saving investment investment for capital gain</li>
-                <li>Corporate fixed deposit</li>
-                <li>National pension scheme</li>
-                <li>Bond market investment</li>
-                <li>ETF investment</li>
-            </ul>
-            <!-- <a href="#" class="btn">Read more</a> -->
-        </div>
-        <div class="services-box">
-          
-            <button href="#" class="btn">LOANS</i></button>
-            <ul>
-                <br>
-                <li>House Building Loan</li>
-                <li>Personal Loan</li>
-                <li>Car Loan</li>
-                <li>Two Wheeler Loan</li> 
-                <li>Education Loan</li>
-                <li>Business Loan</li>
-                <li>Loan Against security</li>
-                <li>Mortgage Loan</li>
-            </ul>
-            <!-- <a href="#" class="btn">Read more</a> -->
-        </div>
-        
-        <div class="services-box">
-          
-            <button href="#" class="btn">OTHERS</i></button>
-            <ul>
-                <br>
-                <li>Portal Savings</li>
-                <li>Customer awareness</li>
-                <li>Website Building & Maintenance</li>
-                <li>Digital Marketing</li>
-                <li>Tax consultancy</li>
-                <li>Online Application Support</li>
-                <li>Customer Awareness Program</li>
-            </ul>
-            <!-- <a href="#" class="btn">Read more</a> -->
-        </div>
-
-    </div>
 </section>
 
 </body>
