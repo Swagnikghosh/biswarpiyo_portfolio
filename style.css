@@ -70,6 +70,7 @@ ul.navlist {
 .navlist li a {
     display: inline-flex;
     font-weight: 600;
+    margin-top: 20px;
 }
 
 .navlist li a:hover,

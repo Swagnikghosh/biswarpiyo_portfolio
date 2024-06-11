@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+            
+        <title>PDF Download Page</title>
+        <link rel="stylesheet" href="style3.css">
+        <!-- <link rel="stylesheet" href="cart.css"> -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
+    
+        
+    </head>
+    <body>
+        <div class="overlay"></div>
+    <!-- <header>
+        <a href="#" class="logo"><span>B</span>ISWAPRIYA</a>
+        <ul class="navlist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="cart.html">Services</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="calculator2.html">Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="right-header">
+           
+            <div class="menu-icon">
+                <div class="bar"></div>
+            </div>
+        </div>
+    </header> -->
+        <section class="services" id="services">
+            <div class="main-text">
+                <h2 class="heading">Excel Calculator page</h2>
+                <span>what i will do for you</span>
+            </div>
+
+            <div class="container">
+
+                <div class="download">
+                    <input type="text" id="search"
+                        placeholder="Search by PDF Name">
+                    <button id="search-button">Search</button>
+                </div>
+
+            </div>
+            <br><br>
+            <div class="allService">
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">PGP INSURENCE CALCULATOR</h3>
+                    <br>
+                    <a href="excel\PGP Insurance Calculator.xlsx"
+                    class="btn" target="_blank">Open</a>
+                </div>
+
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title"> PGP RETIREMENT PLANNING</h3>
+                    <br>
+                    <a href="excel\PGP Retirement Planning Unlocked (4).xls"
+                        class="btn" target="_blank">Open</a>
+                </div>
+
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title"> COMPREHENSIVE FINANCIAL PLANNING</h3>
+                    <br>
+                    <a href="excel\Comprehensive Financial Planning.xlsx"
+                    class="btn" target="_blank">Open</a>
+                </div>
+
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">REGULAR COMPOUNDING CALCULATOR</h3>
+                    <br>
+                    <a href="excel\Regular Compunding Calculator PGPRCC Unlocked (1).xls"
+                    class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">ECONOMIC BS FINAL</h3>
+                    <br>
+                    <a href="excel\Economic_BS_Final.xlsx"
+                        class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">SESSION 4 EXCEL WORKINGS</h3>
+                    <br>
+                    <a href="excel\Session 4 Excel Workings.xlsx"
+                        class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">TROIKA OF SIP,STP,SWP </h3>
+                    <br>
+                    <a href="excel\Troika of SIP, STP and SWP.xls"
+                        class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">SESSION 6 EXAMPLES</h3>
+                    <br>
+                    <a href="excel\Session 6 Examples.xlsx"
+                    class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">PGP LOANS AND EMIS</h3>
+                    <br>
+                    <a href="excel\PGP Loans, EMIs and Amortization - more to come.xlsx"
+                        class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">SESSION 9 EXCEL</h3>
+                    <br>
+                    <a href="excel\Session 9 Excel.xlsx"
+                        class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">SESSION 5 EXCEL</h3>
+                    <br>
+                    <a href="excel\Session 5 Excel.xlsx"
+                        class="btn" target="_blank">Open</a>
+                </div>
+                <div class="servicesItem">
+
+                    <h3 class="pdf-title">REGULAR COMPOUNDING CALCULATOR</h3>
+                    <br>
+                    <a href="excel\Regular Compunding Calculator PGPRCC Unlocked (1).xls"
+                        class="btn" target="_blank">Open</a>
+                </div>
+            </div>
+
+        </section>
+        <script>
+            const searchInput = document.getElementById("search");
+const pdfCards = document.querySelectorAll(".servicesItem");
+
+document.getElementById("search-button").addEventListener("click", () => {
+    const searchText = searchInput.value.toLowerCase();
+
+    pdfCards.forEach((card) => {
+        const title = card.querySelector(".pdf-title").textContent.toLowerCase();
+        const button = card.querySelector(".btn");
+
+        if (title.includes(searchText)) {
+            card.style.display = "flex";
+            button.style.display = "flex"; // Show the button
+        } else {
+            card.style.display = "none";
+            button.style.display = "none"; // Hide the button
+        }
+    });
+});
+
+            
+    </script>
+    </body>
+</html>
